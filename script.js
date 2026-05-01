@@ -1,3 +1,7 @@
+// ===== SCROLL TO TOP =====
+const scrollTopBtn = document.querySelector('.scroll-top');
+scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
@@ -79,10 +83,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 fadeEls.forEach(el => fadeObserver.observe(el));
-
-// ===== SCROLL TO TOP =====
-const scrollTopBtn = document.querySelector('.scroll-top');
-scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ===== CONTACT FORM =====
 const form = document.querySelector('.contact__form form');
